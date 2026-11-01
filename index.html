@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NotePort: send NotebookLM Studio Notes to Obsidian</title>
+  <meta name="description" content="NotePort is a Chrome extension that exports your NotebookLM Studio Notes into your Obsidian vault as Markdown, with the source kept in the frontmatter.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e5a5f'/%3E%3Cpath d='M9 22V10h4.2c3.2 0 5 1.5 5 3.9s-1.8 3.9-5 3.9H12' fill='none' stroke='%23fff' stroke-width='2.6'/%3E%3Ccircle cx='23' cy='22' r='2.4' fill='%23f0a202'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="wordmark" href="/">NotePort</a>
+      <nav aria-label="Main">
+        <a href="#setup">Set up</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <h1>Send NotebookLM Studio Notes to Obsidian</h1>
+          <p class="lede">NotePort is a Chrome extension that saves your Studio Notes straight into your Obsidian vault as Markdown, one note or a whole batch at a time.</p>
+          <!-- Replace this span with: <a class="btn" href="YOUR-CHROME-WEB-STORE-URL">Add to Chrome</a> once the listing is live -->
+          <span class="btn" aria-disabled="true">Chrome Web Store listing coming soon</span>
+          <p class="fineprint">Free. Works with the Obsidian Local REST API plugin.</p>
+        </div>
+
+        <figure style="margin:0">
+          <div class="file">
+            <dl class="file-route">
+              <dt>From</dt>
+              <dd>NotebookLM Studio Note</dd>
+              <dt>To</dt>
+              <dd>Your vault / Notes / Chapter 4 summary.md</dd>
+            </dl>
+<pre><span class="d">---</span>
+<span class="k">title:</span> Chapter 4 summary
+<span class="k">source_platform:</span> notebooklm
+<span class="k">source_url:</span> https://notebooklm.google.com/…
+<span class="k">source_type:</span> studio_note
+<span class="k">exported_at:</span> 2026-11-01T15:42:00Z
+<span class="d">---</span>
+
+## Key points
+
+- The note body arrives as clean Markdown
+- Headings, lists and tables stay intact
+</pre>
+          </div>
+          <figcaption class="caption">Example of an exported note. Every export records where it came from.</figcaption>
+        </figure>
+      </div>
+
+      <section aria-labelledby="what">
+        <h2 id="what">What NotePort does</h2>
+        <div class="features">
+          <div>
+            <h3>Exports Studio Notes</h3>
+            <p>Most NotebookLM tools export chat conversations. NotePort exports the notes you have saved in Studio.</p>
+          </div>
+          <div>
+            <h3>Exports in batches</h3>
+            <p>Pick several notes and send them all to your vault in one go.</p>
+          </div>
+          <div>
+            <h3>Handles duplicates your way</h3>
+            <p>When a note already exists in your vault, choose to replace it, append to it, or keep both as separate copies.</p>
+          </div>
+          <div>
+            <h3>Keeps the source</h3>
+            <p>Each note carries its platform, link, type and export time in the frontmatter, so you can always trace it back.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="setup" aria-labelledby="setup-title">
+        <h2 id="setup-title">Set up</h2>
+        <ol class="steps">
+          <li>Install NotePort from the Chrome Web Store.</li>
+          <li>In Obsidian, install and enable the <strong>Local REST API</strong> plugin, then copy its API key.</li>
+          <li>Open NotePort’s settings, paste the key, and test the connection.</li>
+          <li>Open a notebook in NotebookLM, select your Studio Notes, and export.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Your notes stay on your computer</h2>
+        <div class="note-box">
+          <p>NotePort sends your notes from your browser to Obsidian running on your own machine. There is no NotePort server, no account, no analytics and no ads.</p>
+          <p><a href="privacy.html">Read the privacy policy</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Questions or bug reports: <a href="mailto:noteportdev@gmail.com">noteportdev@gmail.com</a></p>
+      <p>NotePort is an independent project. It is not affiliated with, endorsed by, or sponsored by Google or Obsidian. NotebookLM is a trademark of Google LLC. Obsidian is a trademark of Dynalist Inc.</p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+    </footer>
+  </div>
+</body>
+</html>
